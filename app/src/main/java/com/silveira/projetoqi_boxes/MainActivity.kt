@@ -6,10 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -51,15 +48,19 @@ fun Home() {
                     IconButton(
                         onClick = {},
                     ) {
-                        Icon(Icons.Default.MoreVert, "Tres pontos", tint = Color.Black)
+                        Icon(Icons.Default.MoreVert, "Three points", tint = Color.Black)
                     }
                 }
             )
         },
     ) { innerPading ->
-        LazyColumn(Modifier.fillMaxSize().padding(innerPading)) {
+        LazyColumn(
+            Modifier
+                .fillMaxSize()
+                .padding(innerPading)) {
             item {
                 GerenCard()
+                maizinho()
             }
         }
     }
@@ -90,10 +91,19 @@ fun GerenCard() {
                     onCheckedChange = {}
                 )
                 IconButton(onClick = {}){
-                    Icon(Icons.Default.Delete,"")
+                    Icon(Icons.Default.Delete,"Symbol of a leattle trash.")
                 }
             }
         }
+    }
+}
+
+@Composable
+fun maizinho(onClick: () -> Unit) {
+    FloatingActionButton(
+        onClick = { onClick() },
+    ) {
+        Icon(Icons.Filled.Add, "button for add")
     }
 }
 
@@ -103,5 +113,6 @@ fun GreetingPreview() {
     AppTheme {
         Home()
         GerenCard()
+        maizinho()
     }
 }
