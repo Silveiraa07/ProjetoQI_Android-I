@@ -48,11 +48,19 @@ fun Home() {
                     IconButton(
                         onClick = {},
                     ) {
-                        Icon(Icons.Default.MoreVert, "Three points", tint = Color.Black)
+                        Icon(Icons.Default.MoreVert, "Três pontos de configurações", tint = Color.Black)
                     }
                 }
             )
         },
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = {},
+            ) {
+
+                Icon(Icons.Filled.Add, "Botão de adicionar")
+            }
+        }
     ) { innerPading ->
         LazyColumn(
             Modifier
@@ -60,7 +68,7 @@ fun Home() {
                 .padding(innerPading)) {
             item {
                 GerenCard()
-                maizinho()
+
             }
         }
     }
@@ -91,28 +99,9 @@ fun GerenCard() {
                     onCheckedChange = {}
                 )
                 IconButton(onClick = {}){
-                    Icon(Icons.Default.Delete,"Symbol of a leattle trash.")
+                    Icon(Icons.Default.Delete,"Símbolo de uma pequena lixeira.")
                 }
             }
         }
-    }
-}
-
-@Composable
-fun maizinho(onClick: () -> Unit) {
-    FloatingActionButton(
-        onClick = { onClick() },
-    ) {
-        Icon(Icons.Filled.Add, "button for add")
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AppTheme {
-        Home()
-        GerenCard()
-        maizinho()
     }
 }
