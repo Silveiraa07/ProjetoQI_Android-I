@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProjetoQI_Boxes</string>
+    <string name="topbar_tittle">Lista de quehaceres</string>
+    <string name="description_icon_trash">Símbolo de una pequeña papelera.</string>
+    <string name="description_icon_three">Los tres puntos de configuración.</string>
+    <string name="add_button">Botón de agregar.</string>
+</resources>

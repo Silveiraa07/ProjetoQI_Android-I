@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProjetoQI_Boxes</string>
+    <string name="topbar_tittle">To-do list</string>
+    <string name="description_icon_trash">Symbol of a little trash.</string>
+    <string name="description_icon_three">The three configuration points.</string>
+    <string name="add_button">Add button.</string>
 </resources>
